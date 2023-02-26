@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+    // Задание 1
+    // Создайте функцию которая возводит переданное число в куб, необходимо вывести в консоль результат 2^3 степени + 3 ^ 3 степени
+    
+    
+    function NumberDegree (number) {
+        let result = number ** 3;
+        console.log (`Число ${number} в кубе равно ${result}`);
+    }
+
+    NumberDegree(2);
+    NumberDegree(3);
+
+    // Задание 2
+    // Пользователь вводит с клавиатуры число, если ввёл текст, необходимо вывести что значение задано неверно
+    // Создать фукнцию, которая высчитывает 13% от данного числа и выводит в консоль текст "Размер заработной платы за вычетом налогов равен значение"
+
+    let number = +prompt('Введите размер вашей заработной платы');
+
+    function SalaryWithoutTax(salary) {
+    if (!Number.isNaN(salary) == false) {
+        console.log ('Значение задано неверно');
+    } else {
+        let result = salary*0.87;
+        console.log (`Ваша заработная плата за вычетом налога равна ${result}`);
+    } 
+    }
+    
+    SalaryWithoutTax (number);
+
+    // Задание 3
+    // Пользователь с клавиатуры вводит 3 числа, необходимо создать функцию, которая определяет максимальное значение среди этих чисел
+
+    let num1 = +prompt('Введите первое число');
+    let num2 = +prompt('Введите второе число');
+    let num3 = +prompt('Введите третье число');
+
+    function ComparisonOfThreeNumbers(num1, num2, num3) {
+        if (num1 > num2) {
+            if (num1 > num3) {
+                alert (`Максимальное из трех чисел ${num1}`);
+            } else alert (`Максимальное из трех чисел ${num3}`);
+        } else if (num2 > num3) {
+            alert (`Максимальное из трех чисел ${num2}`);
+        } else  alert (`Максимальное из трех чисел ${num3}`);
+    }
+    ComparisonOfThreeNumbers (num1, num2, num3);
+
+    // Задание 4
+    // Необходимо реализовать четыре функции, каждая функция должна принимать по два числа и выполнять одну из операций (каждая функция выполняет одну из них):
+    // 1. Сложение
+    // 2. Разность
+    // 3. Умножение
+    // 4. Деление
+
+    
+
+    function Summa(num1, num2) {
+        console.log (`Сумма чисел ${num1} и ${num2} = ${num1+num2}`);
+    }
+    Summa (2,6);
+
+    function Diff (num1, num2) {
+        if (num1 > num2) {
+            console.log (`Разность чисел ${num1} и ${num2} = ${num1-num2}`);
+        } else {
+            console.log (`Разность чисел ${num2} и ${num1} = ${num2-num1}`);
+        }
+        
+    }
+    Diff (2,6);
+    Diff (6,2);
+    Diff (2,2);
+
+    function Mult (num1, num2) {
+        console.log (`Произведение чисел ${num1} и ${num2} = ${num1*num2}`);
+    }
+    Mult (2,6);
+
+    function Average(num1, num2) {
+        console.log (`Частное чисел ${num1} и ${num2} = ${num1/num2}`);
+    }
+    Average (2,6);
+
+    // Необходимо сделать так, чтобы функция вернула число, например выражение console.log(sum(2, 6)); должно вывести число 8 в консоль (sum - функция сложения в данном примере, ваши названия функций могут отличаться). Округлять значения, которые возвращают функции не нужно, однако, обратите внимание на разность, функция должна вычесть из большего числа меньшее, либо вернуть 0, если числа равны. Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать не нужно.
+
+
+    </script>
+</body>
+</html>
